@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Page</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .top_bar {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        background-color: rgb(255, 255, 255);
+        /* margin-top: 5px; */
+        border: 1px solid transparent;
+        border-radius: 5px;
+        height: 50px;
+        align-items: center;
+        /* box-shadow: 10px 10px 5px 2px rgb(201, 212, 201) ;          */
+        box-shadow: 10px 10px 5px 2px rgb(142, 160, 142);
+      }
 
-        body{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .top_bar {
-            display:flex;
-            justify-content: space-around;
-            list-style-type: none;
-            background-color: rgb(255, 255, 255);
-            /* margin-top: 5px; */
-            border: 1px solid transparent;
-            border-radius: 5px;
-            height: 50px;
-            align-items: center;
-            /* box-shadow: 10px 10px 5px 2px rgb(201, 212, 201) ;          */
-            box-shadow: 10px 10px 5px 2px rgb(142, 160, 142);
-        }
+      .search_bar {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-        .search_bar{
-            text-align: center;
-            margin-top: 20px;
-        }
-
-
-        #myInput{
-            width: 50%;
-            height: 30px;
-            border: solid black 2px;
-        }
-        #myInput:focus{
+      #myInput {
+        width: 50%;
+        height: 30px;
+        border: solid black 2px;
+      }
+      #myInput:focus {
         border: transparent 0px solid;
+      }
 
-        }
+      #myInput:visited {
+        border: transparent solid 0px;
+      }
 
-        #myInput:visited{
-            border: transparent solid 0px;
-        }
-
-      .details{
+      .details {
         text-align: center;
         margin-left: 30%;
       }
-      
-      .name{
-       text-align: left;
+
+      .name {
+        text-align: left;
       }
 
       table tr td {
@@ -60,225 +57,256 @@
         margin-left: 20%;
         border: 1px solid black;
       }
-      a{
-         text-decoration: none;
+      a {
+        text-decoration: none;
       }
 
-      td{
+      td {
         padding: 10px;
       }
-      tr:nth-child(odd){
+      tr:nth-child(odd) {
         background-color: rgb(250, 248, 248);
       }
-     
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <header>
-            <div class="top_bar">
-                <li> <a href="./index.html">Home</a></li>
-                <li>PlayLists</li>
-                <li><a href="">About</a></li>
-            </div>
-            <div class="search_bar">
-                <input type="search" id="myInput" name="search" placeholder="Search Name " onkeyup="searchFunction()">
-            </div>
-        </header>
-
-
-        <div>
-            <table id="myTable">
-                <tr> 
-                    <th class="name">Name</th>
-                    <th class="details">Details</th>
-                </tr>
-                <tr>
-                    <td class="name"><a href="./ganeshjipage.html">Ganesh ji</a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <div>
-                <tr>
-                    <td class="name"><a href="./hanumanjipage.html">Hanuman ji</a></td>
-                    <td class="details">aarti ,chalisa , stuti, bajarang ban more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="./shivjipage.html">Shiv ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="./shreerampage.html">Shree Ram ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="./krishanjipage.html">Krishan ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Narayan ji   X  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="bheruji.html">Bheru ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Brmha ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Ramdev ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Khatu Shyam Ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Hari ram ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Goga ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Kuber ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Narsingh ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Garud ji </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Nag dev ji  </a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Durga Maa</a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-                <tr>
-                    <td class="name"><a href="">Laxi Maa</a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-
-                <tr>
-                    <td class="name"><a href="">Parwati Maa</a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-
-                <tr>
-                    <td class="name"><a href="">Chamunda</a></td>
-                    <td class="details">aarti ,vandna , stuti, katha more...</td>
-                </tr>
-
-                <tr>
-                    <td class="name"><a href="">Sai Baba</a></td>
-                    <td class="details">aarti ,vandna , astuti, katha more...</td>
-                </tr>
-
-                <tr>
-                    <td class="name"><a href="">Radha ji</a></td>
-                    <td class="details">aarti ,vandna , astuti, katha more...</td>
-                </tr>
-                        <!-- After this creat same page linkes -->
-
-                        <!-- Ganesh ji Section -->
-                        <tr>
-                            <td class="name"><a href="ganeshjipage.html#aarti">Ganesh Ji Aarti</a></td>
-                            <td class="details"> aarti & more...</td>
-                        </tr>
-                        <tr>
-                            <td class="name"><a href="ganeshjipage.html#chalisa">Ganesh ji Chalisa</a></td>
-                            <td class="details"> Chalisa & more...</td>
-                        </tr>
-
-                        <tr>
-                            <td class="name"><a href="ganeshjipage.html#stuti">Ganesh ji Stuti</a></td>
-                            <td class="details"> stuti & more...</td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="name"><a href="ganeshjipage.html#bhajan">Ganesh Bhajan </a></td>
-                            <td class="details"> Bhajan & more...</td>
-                        </tr>
-                                    <!-- Shree Ram Section -->
-                        <tr>
-                            <td class="name"><a href="./shreerampage.html#stuti">Shree Ram Stuti </a></td>
-                            <td class="details"> Stuti &  more...</td>
-                        </tr>
-                        <tr>
-                            <td class="name"><a href="shreerampage.html#bhajan">Shree Ram Bhajan </a></td>
-                            <td class="details"> Bhajan & more...</td>
-                        </tr>
-                                <!-- Shiv ji Section -->
-                        <tr>
-                            <td class="name"><a href="shivjipage.html#stuti">Shiv Stuti </a></td>
-                            <td class="details"> Stuti & more...</td>
-                        </tr>
-                        <tr>
-                            <td class="name"><a href="shivjipage.html#aarti">Shiv aarti </a></td>
-                            <td class="details"> Aarti & more...</td>
-                        </tr>
-                                <!-- Hanuman Ji Section -->
-                                <td class="name"><a href="hanumanjipage.html#aarti">Hanuman ji aarti </a></td>
-                                <td class="details"> Aarti & more...</td>
-
-                                <tr>
-                                    <td class="name"><a href="hanumanjipage.html#stuti">Hanuman Stuti </a></td>
-                                    <td class="details"> Stuti & more...</td>
-                                </tr>
-                                <tr>
-                                    <td class="name"><a href="hanumanjipage.html#chalisa">Hanuman Chalisa </a></td>
-                                    <td class="details">Chalisa & more...</td>
-                                </tr>
-
-                                <!-- Krishan Ji Section -->
-                                <tr>
-                                    <td class="name"><a href="krishanjipage.html#stuti">Krishan Stuti </a></td>
-                                    <td class="details">Stuti & more...</td>
-                                </tr>
-                                <tr>
-                                    <td class="name"><a href="krishanjipage.html#aarti">Krishan Aarti </a></td>
-                                    <td class="details">aarti & more...</td>
-                                </tr>
-            </div>
-            </table>
+      <header>
+        <div class="top_bar">
+          <li><a href="./index.html">Home</a></li>
+          <li>PlayLists</li>
+          <li><a href="">About</a></li>
         </div>
+        <div class="search_bar">
+          <input
+            type="search"
+            id="myInput"
+            name="search"
+            placeholder="Search Name "
+            onkeyup="searchFunction()"
+          />
+        </div>
+      </header>
 
+      <div>
+        <table id="myTable">
+          <tr>
+            <th class="name">Name</th>
+            <th class="details">Details</th>
+          </tr>
+          <tr>
+            <td class="name"><a href="./ganeshjipage.html">Ganesh ji</a></td>
+            <td class="details">aarti ,vandna , stuti, katha more...</td>
+          </tr>
+          <div>
+            <tr>
+              <td class="name">
+                <a href="./hanumanjipage.html">Hanuman ji</a>
+              </td>
+              <td class="details">
+                aarti ,chalisa , stuti, bajarang ban more...
+              </td>
+            </tr>
+            <tr>
+              <td class="name"><a href="./shivjipage.html">Shiv ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="./shreerampage.html">Shree Ram ji </a>
+              </td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="./krishanjipage.html">Krishan ji </a>
+              </td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Narayan ji X </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="#">Bheru ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Brmha ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Ramdev ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Khatu Shyam Ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Hari ram ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Goga ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Kuber ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Narsingh ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Garud ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Nag dev ji </a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Durga Maa</a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+            <tr>
+              <td class="name"><a href="">Laxi Maa</a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
 
+            <tr>
+              <td class="name"><a href="">Parwati Maa</a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+
+            <tr>
+              <td class="name"><a href="">Chamunda</a></td>
+              <td class="details">aarti ,vandna , stuti, katha more...</td>
+            </tr>
+
+            <tr>
+              <td class="name"><a href="">Sai Baba</a></td>
+              <td class="details">aarti ,vandna , astuti, katha more...</td>
+            </tr>
+
+            <tr>
+              <td class="name"><a href="">Radha ji</a></td>
+              <td class="details">aarti ,vandna , astuti, katha more...</td>
+            </tr>
+            <!-- After this creat same page linkes -->
+
+            <!-- Ganesh ji Section -->
+            <tr>
+              <td class="name">
+                <a href="ganeshjipage.html#aarti">Ganesh Ji Aarti</a>
+              </td>
+              <td class="details">aarti & more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="ganeshjipage.html#chalisa">Ganesh ji Chalisa</a>
+              </td>
+              <td class="details">Chalisa & more...</td>
+            </tr>
+
+            <tr>
+              <td class="name">
+                <a href="ganeshjipage.html#stuti">Ganesh ji Stuti</a>
+              </td>
+              <td class="details">stuti & more...</td>
+            </tr>
+
+            <tr>
+              <td class="name">
+                <a href="ganeshjipage.html#bhajan">Ganesh Bhajan </a>
+              </td>
+              <td class="details">Bhajan & more...</td>
+            </tr>
+            <!-- Shree Ram Section -->
+            <tr>
+              <td class="name">
+                <a href="./shreerampage.html#stuti">Shree Ram Stuti </a>
+              </td>
+              <td class="details">Stuti & more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="shreerampage.html#bhajan">Shree Ram Bhajan </a>
+              </td>
+              <td class="details">Bhajan & more...</td>
+            </tr>
+            <!-- Shiv ji Section -->
+            <tr>
+              <td class="name">
+                <a href="shivjipage.html#stuti">Shiv Stuti </a>
+              </td>
+              <td class="details">Stuti & more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="shivjipage.html#aarti">Shiv aarti </a>
+              </td>
+              <td class="details">Aarti & more...</td>
+            </tr>
+            <!-- Hanuman Ji Section -->
+            <td class="name">
+              <a href="hanumanjipage.html#aarti">Hanuman ji aarti </a>
+            </td>
+            <td class="details">Aarti & more...</td>
+
+            <tr>
+              <td class="name">
+                <a href="hanumanjipage.html#stuti">Hanuman Stuti </a>
+              </td>
+              <td class="details">Stuti & more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="hanumanjipage.html#chalisa">Hanuman Chalisa </a>
+              </td>
+              <td class="details">Chalisa & more...</td>
+            </tr>
+
+            <!-- Krishan Ji Section -->
+            <tr>
+              <td class="name">
+                <a href="krishanjipage.html#stuti">Krishan Stuti </a>
+              </td>
+              <td class="details">Stuti & more...</td>
+            </tr>
+            <tr>
+              <td class="name">
+                <a href="krishanjipage.html#aarti">Krishan Aarti </a>
+              </td>
+              <td class="details">aarti & more...</td>
+            </tr>
+          </div>
+        </table>
+      </div>
     </div>
 
     <script>
-        function searchFunction(){
-            let filter = document.getElementById('myInput').value.toUpperCase()
-            console.log(filter)
-            let myTable = document.getElementById('myTable')
-            let tableRow = myTable.getElementsByTagName('tr')
+      function searchFunction() {
+        let filter = document.getElementById("myInput").value.toUpperCase();
+        console.log(filter);
+        let myTable = document.getElementById("myTable");
+        let tableRow = myTable.getElementsByTagName("tr");
 
-            for(let i=0; i<=tableRow.length; i++){
-                let td = tableRow[i].getElementsByTagName('td')[0]
+        for (let i = 0; i <= tableRow.length; i++) {
+          let td = tableRow[i].getElementsByTagName("td")[0];
 
-                if(td)
-                {
-                 let textValue=   td.textContent || td.innerHTML
-                 if(textValue.toUpperCase().indexOf(filter) >-1){
-                    tableRow[i].style.display=''
-                 }
-                 else{
-                    tableRow[i].style.display="none"
-                 }
-                }
-
+          if (td) {
+            let textValue = td.textContent || td.innerHTML;
+            if (textValue.toUpperCase().indexOf(filter) > -1) {
+              tableRow[i].style.display = "";
+            } else {
+              tableRow[i].style.display = "none";
             }
-
-
+          }
         }
+      }
     </script>
-</body>
+  </body>
 </html>
